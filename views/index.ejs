@@ -14,6 +14,8 @@
 
     <h2>Student List</h2>
 
+    
+
     <table border="1" cellpadding="10">
 
         <tr>
@@ -40,6 +42,20 @@
             <td><%= student.year_level %></td>
             <td><%= student.email %></td>
         </tr>
+
+        <form action="/students/search" method="GET">
+
+    <input
+        type="text"
+        name="keyword"
+        placeholder="Search student..."
+    >
+
+    <button type="submit">
+        Search
+    </button>
+
+    </form>
 
         <% }); %>
 
