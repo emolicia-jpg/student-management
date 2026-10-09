@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Student</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+    <main class="container">
+        <header class="page-header">
+            <div>
+                <p class="eyebrow">Student directory</p>
+                <h1>Add Student</h1>
+            </div>
+        </header>
 
-    <h1>Add Student</h1>
-
-    <form action="/students/add" method="POST">
-
-        <label>Student ID:</label><br>
-        <input type="text" name="student_id" required>
-        <br><br>
-
-        <label>First Name:</label><br>
-        <input type="text" name="first_name" required>
-        <br><br>
-
-        <label>Last Name:</label><br>
-        <input type="text" name="last_name" required>
-        <br><br>
-
-        <label>Course:</label><br>
-        <input type="text" name="course" required>
-        <br><br>
-
-        <label>Year Level:</label><br>
-        <input type="number" name="year_level" min="1" max="5" required>
-        <br><br>
-
-        <label>Email:</label><br>
-        <input type="email" name="email" required>
-        <br><br>
-
-        <button type="submit">Save Student</button>
-
-    </form>
-
-    <br>
-
-    <a href="/">Back to Student List</a>
-
+        <section class="card">
+            <h2>Student details</h2>
+            <p class="section-description">Enter the student's information below.</p>
+            <form class="student-form" action="/students/add" method="POST">
+                <div class="field">
+                    <label for="student_id">Student ID</label>
+                    <input id="student_id" type="text" name="student_id" required>
+                </div>
+                <div class="field">
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" type="text" name="first_name" required>
+                </div>
+                <div class="field">
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" type="text" name="last_name" required>
+                </div>
+                <div class="field">
+                    <label for="course">Course</label>
+                    <input id="course" type="text" name="course" required>
+                </div>
+                <div class="field">
+                    <label for="year_level">Year Level</label>
+                    <input id="year_level" type="number" name="year_level" min="1" max="5" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Save Student</button>
+                    <a class="button button-secondary" href="/">Back to Student List</a>
+                </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
